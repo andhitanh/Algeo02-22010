@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@700&family=Roboto+Mono:wght@500;600&display=swap');
+@layer base {
+    li {
+        @apply px-4;
+        @apply cursor-pointer;
+    }
+}
