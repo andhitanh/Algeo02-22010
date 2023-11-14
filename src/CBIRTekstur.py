@@ -50,6 +50,3 @@ class Tekstur:
     
     def cosSimil(vec1, vec2):
         return(np.dot(vec1,vec2)/(math.sqrt(vec1[0]**2+vec1[1]**2+vec1[2]**2)*math.sqrt(vec2[0]**2+vec2[1]**2+vec2[2]**2)))
-
-
-
