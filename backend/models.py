@@ -1,8 +1,11 @@
-import db
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
 
 class Dataset(db.Model):
+    __tablename__ = "images"
     id=db.Column("id",db.Integer, primary_key=True)
-    img=db.Column(db.text, unique=True, nullable=False)
+    img=db.Column(db.Text, unique=True, nullable=False)
     hue=db.Column(db.Float)
     sat=db.Column(db.Float)
     val=db.Column(db.Float)
