@@ -43,10 +43,10 @@ class Tekstur:
         return CHEvec
                 
     def kompres(image,path):
-            while (os.path.getsize(path)>50000):
+            while (os.path.getsize(path)>10000):
                 image=image.resize((int(image.size[0]/2),int(image.size[1]/2)))
                 image.save(path, optimize=True, quality=25)
             return image
     
-    def cosSimil(vec1, vec2):
+    def cosSimil(self,vec1, vec2):
         return(np.dot(vec1,vec2)/(math.sqrt(vec1[0]**2+vec1[1]**2+vec1[2]**2)*math.sqrt(vec2[0]**2+vec2[1]**2+vec2[2]**2)))
