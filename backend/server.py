@@ -17,11 +17,11 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-UPLOAD_FOLDER = '../img'
+UPLOAD_FOLDER = '../frontend/src/img'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -30,11 +30,12 @@ ma=Marshmallow(app)
  
 class ImageSchema(ma.Schema):
     class Meta:
-        fields = ('id','title')
-image_schema = ImageSchema(many=True)
+        fields = ('id','img','hue','sat','val','contrast','homogeneity','entropy')
+image_schema = ImageSchema()
+images_schema = ImageSchema(many=True)
 
 # Route for seeing a data
-@app.route('/api')
+@app.route('/')
 def getData():
     return {
         'id': 4,
@@ -99,7 +100,7 @@ def upload_image():
 @app.route('/images', methods=['GET'])
 def get_image():
     result_images = Dataset.query.all()
-    results = image_schema.dump(result_images)
+    results = images_schema.dump(result_images)
     return jsonify(results)
 
 # Running app
