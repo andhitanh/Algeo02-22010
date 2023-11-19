@@ -16,26 +16,21 @@ const Result = ({ currentPage, setCurrentPage, imagesPerPage }) => {
     
     //     setImages(displayedImages);
     // }, [currentPage, imagesPerPage, isWarnaOn]);
-    const getFilteredImages = () => {
-        if (isWarnaOn) {
-          return data.filter((item) => item.colorSimilarity >= 60);
-        } else {
-          return data.filter((item) => item.textureSimilarity >= 60);
+        if (isWarnaOn){
+            fetch('/searchWarna')
+                .then((res) => res.json())
+                .then(data => {
+                setImages(data);
+            })
         }
-      };
-  
-      // Set filtered images based on color or texture
-      const filteredImages = getFilteredImages();
-      setImages(filteredImages);
-  
-      // Calculate the index range for the current page
-      const startIndex = (currentPage - 1) * imagesPerPage;
-      const endIndex = startIndex + imagesPerPage;
-  
-      // Slice the filtered images array to get only the images for the current page
-      const displayedImages = filteredImages.slice(startIndex, endIndex);
-  
-      setImages(displayedImages);
+        else{
+            fetch('/searchTekstur')
+                .then((res) => res.json())
+                .then(data => {
+                setImages(data);
+                console.log(data);
+            })
+        }
     }, [currentPage, imagesPerPage, isWarnaOn]);
 
     // //Filter warna
@@ -102,12 +97,12 @@ const Result = ({ currentPage, setCurrentPage, imagesPerPage }) => {
             <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4 '>
                 {imgs.map((item, index) => (
                 <div key={index} className='border shadow-lg-2xl rounded-lg'>
-                    <img src={item.image} alt={item.name} className='w-full h-[200px] object-cover rounded-t-lg'/>
+                    <img src={require(`${item.path}`)} alt={item.name} className='w-full h-[200px] object-cover rounded-t-lg'/>
                     <div className='flex justify-between px-2 py-3 text-[#33272a]'>
                         <p className='font-bold '>{item.name}</p>
                         <p>
                         <span className='bg-[#33272a] text-[14px] text-[#eff0f3] font-semibold rounded-full p-1'>
-                        {isWarnaOn ? item.colorSimilarity : item.textureSimilarity}
+                        {item.val}
                         </span>
                         </p>
                     </div>
