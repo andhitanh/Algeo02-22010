@@ -66,9 +66,6 @@ class HSVConverter :
                     HSV[i][j][0] = hue[i][j]
                     HSV[i][j][1] = sat[i][j]
                     HSV[i][j][2] = value[i][j]
-        print("HSV :")
-        print(HSV)
-        print("\n")
         return HSV
     
     def cosinesimilarity(HSV1, HSV2) :
