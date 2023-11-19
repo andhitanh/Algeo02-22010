@@ -1,37 +1,22 @@
 [
       {
-            "name": "0.jpg",
-            "path": "dataset\\0.jpg",
-            "val": "99.99999999999999%"
+            "name": "Screenshot_2023-03-03_204729.png",
+            "path": "dataset\\Screenshot_2023-03-03_204729.png",
+            "val": "99.99999999999997%"
       },
       {
-            "name": "6.jpg",
-            "path": "dataset\\6.jpg",
-            "val": "97.12233893153984%"
+            "name": "Screenshot_2023-01-21_192532.png",
+            "path": "dataset\\Screenshot_2023-01-21_192532.png",
+            "val": "82.91833945781309%"
       },
       {
-            "name": "5.jpg",
-            "path": "dataset\\5.jpg",
-            "val": "96.5842530014688%"
+            "name": "Screenshot_2023-02-09_162750.png",
+            "path": "dataset\\Screenshot_2023-02-09_162750.png",
+            "val": "80.28964981872102%"
       },
       {
-            "name": "3.jpg",
-            "path": "dataset\\3.jpg",
-            "val": "90.37676501290954%"
-      },
-      {
-            "name": "1.jpg",
-            "path": "dataset\\1.jpg",
-            "val": "90.36872970663966%"
-      },
-      {
-            "name": "2.jpg",
-            "path": "dataset\\2.jpg",
-            "val": "90.28248850240452%"
-      },
-      {
-            "name": "4.jpg",
-            "path": "dataset\\4.jpg",
-            "val": "82.11213013838275%"
+            "name": "Screenshot_2022-11-30_202453.png",
+            "path": "dataset\\Screenshot_2022-11-30_202453.png",
+            "val": "66.55314263281656%"
       }
 ]
