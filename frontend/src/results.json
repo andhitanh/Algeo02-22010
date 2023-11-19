@@ -2,36 +2,211 @@
       {
             "name": "0.jpg",
             "path": "dataset\\0.jpg",
-            "val": "99.99999999999999%"
+            "val": 100.0
+      },
+      {
+            "name": "30.jpg",
+            "path": "dataset\\30.jpg",
+            "val": 97.874
+      },
+      {
+            "name": "11.jpg",
+            "path": "dataset\\11.jpg",
+            "val": 97.373
       },
       {
             "name": "6.jpg",
             "path": "dataset\\6.jpg",
-            "val": "97.12233893153984%"
+            "val": 97.061
+      },
+      {
+            "name": "29.jpg",
+            "path": "dataset\\29.jpg",
+            "val": 96.738
+      },
+      {
+            "name": "34.jpg",
+            "path": "dataset\\34.jpg",
+            "val": 96.522
       },
       {
             "name": "5.jpg",
             "path": "dataset\\5.jpg",
-            "val": "96.5842530014688%"
+            "val": 96.363
       },
       {
-            "name": "3.jpg",
-            "path": "dataset\\3.jpg",
-            "val": "90.37676501290954%"
+            "name": "17.jpg",
+            "path": "dataset\\17.jpg",
+            "val": 95.086
+      },
+      {
+            "name": "10.jpg",
+            "path": "dataset\\10.jpg",
+            "val": 94.732
+      },
+      {
+            "name": "32.jpg",
+            "path": "dataset\\32.jpg",
+            "val": 94.243
+      },
+      {
+            "name": "35.jpg",
+            "path": "dataset\\35.jpg",
+            "val": 93.973
+      },
+      {
+            "name": "37.jpg",
+            "path": "dataset\\37.jpg",
+            "val": 93.748
+      },
+      {
+            "name": "25.jpg",
+            "path": "dataset\\25.jpg",
+            "val": 93.458
+      },
+      {
+            "name": "24.jpg",
+            "path": "dataset\\24.jpg",
+            "val": 92.608
+      },
+      {
+            "name": "36.jpg",
+            "path": "dataset\\36.jpg",
+            "val": 91.86
+      },
+      {
+            "name": "41.jpg",
+            "path": "dataset\\41.jpg",
+            "val": 91.332
+      },
+      {
+            "name": "23.jpg",
+            "path": "dataset\\23.jpg",
+            "val": 91.044
+      },
+      {
+            "name": "43.jpg",
+            "path": "dataset\\43.jpg",
+            "val": 90.661
+      },
+      {
+            "name": "16.jpg",
+            "path": "dataset\\16.jpg",
+            "val": 90.555
+      },
+      {
+            "name": "42.jpg",
+            "path": "dataset\\42.jpg",
+            "val": 90.503
       },
       {
             "name": "1.jpg",
             "path": "dataset\\1.jpg",
-            "val": "90.36872970663966%"
+            "val": 90.369
+      },
+      {
+            "name": "33.jpg",
+            "path": "dataset\\33.jpg",
+            "val": 90.324
+      },
+      {
+            "name": "3.jpg",
+            "path": "dataset\\3.jpg",
+            "val": 89.777
       },
       {
             "name": "2.jpg",
             "path": "dataset\\2.jpg",
-            "val": "90.28248850240452%"
+            "val": 89.614
+      },
+      {
+            "name": "13.jpg",
+            "path": "dataset\\13.jpg",
+            "val": 89.558
+      },
+      {
+            "name": "19.jpg",
+            "path": "dataset\\19.jpg",
+            "val": 89.014
+      },
+      {
+            "name": "9.jpg",
+            "path": "dataset\\9.jpg",
+            "val": 88.916
+      },
+      {
+            "name": "15.jpg",
+            "path": "dataset\\15.jpg",
+            "val": 87.262
+      },
+      {
+            "name": "31.jpg",
+            "path": "dataset\\31.jpg",
+            "val": 86.133
+      },
+      {
+            "name": "21.jpg",
+            "path": "dataset\\21.jpg",
+            "val": 86.051
+      },
+      {
+            "name": "39.jpg",
+            "path": "dataset\\39.jpg",
+            "val": 85.376
+      },
+      {
+            "name": "14.jpg",
+            "path": "dataset\\14.jpg",
+            "val": 84.966
+      },
+      {
+            "name": "38.jpg",
+            "path": "dataset\\38.jpg",
+            "val": 84.689
+      },
+      {
+            "name": "18.jpg",
+            "path": "dataset\\18.jpg",
+            "val": 82.838
+      },
+      {
+            "name": "8.jpg",
+            "path": "dataset\\8.jpg",
+            "val": 81.584
+      },
+      {
+            "name": "22.jpg",
+            "path": "dataset\\22.jpg",
+            "val": 81.376
       },
       {
             "name": "4.jpg",
             "path": "dataset\\4.jpg",
-            "val": "82.11213013838275%"
+            "val": 81.209
+      },
+      {
+            "name": "28.jpg",
+            "path": "dataset\\28.jpg",
+            "val": 76.246
+      },
+      {
+            "name": "26.jpg",
+            "path": "dataset\\26.jpg",
+            "val": 73.227
+      },
+      {
+            "name": "20.jpg",
+            "path": "dataset\\20.jpg",
+            "val": 72.473
+      },
+      {
+            "name": "40.jpg",
+            "path": "dataset\\40.jpg",
+            "val": 72.454
+      },
+      {
+            "name": "27.jpg",
+            "path": "dataset\\27.jpg",
+            "val": 63.917
       }
 ]

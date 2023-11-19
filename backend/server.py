@@ -7,6 +7,7 @@ from PIL import Image
 import src.CBIRTekstur as CTexture
 import src.getrgb as CWarna
 import src.matrix as HSVConverter
+import time
 
 app=Flask(__name__)
 CORS(app)
@@ -83,6 +84,7 @@ def upload():
 
 @app.route('/searchWarna')
 def CBIRWarna():
+    t1=time.time()
     imgArr=[]
     searchPth=os.path.join(app.config['UPLOAD_FOLDER'],'search')
     for root, dirs, files in os.walk(searchPth):
@@ -99,15 +101,18 @@ def CBIRWarna():
             HSV=HSVConverter.HSVConverter.countHSV(feat)
             val=HSVConverter.HSVConverter.cosinesimilarity(searchVec,HSV)                
             if val>0.60:
-                temp=dict({'path':os.path.join('dataset', file),'name':file,'val':str(val*100)+'%'})
+                temp=dict({'path':os.path.join('dataset', file),'name':file,'val':round((val*100),3)})
                 imgArr.append(temp)
         break
     imgArr=sorted(imgArr,key=lambda i: i['val'],reverse=True)
     with open('../frontend/src/results.json', 'w') as f:
         json.dump(imgArr,f,indent=6) 
+    t2=time.time()
+    diff=round(t2-t1,5)
+    counter=len(imgArr)
     resp = jsonify({
-        "message": 'Search finished!',
-        "status": 'successs'
+        "timeLapsed": str(diff)+' seconds',
+        "imagesFound": str(counter)
     })
     return resp
 
