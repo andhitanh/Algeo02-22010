@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {data} from '../images/images.js'
 import Pagination from './Pagination'
+import Hasil from '../results.json'
 
 const Result = ({ currentPage, setCurrentPage, imagesPerPage }) => {
     const [imgs, setImages] = useState(data)
@@ -17,19 +18,10 @@ const Result = ({ currentPage, setCurrentPage, imagesPerPage }) => {
     //     setImages(displayedImages);
     // }, [currentPage, imagesPerPage, isWarnaOn]);
         if (isWarnaOn){
-            fetch('/searchWarna')
-                .then((res) => res.json())
-                .then(data => {
-                setImages(data);
-            })
+            fetch('/searchWarna');
         }
         else{
-            fetch('/searchTekstur')
-                .then((res) => res.json())
-                .then(data => {
-                setImages(data);
-                console.log(data);
-            })
+            fetch('/searchTekstur');
         }
     }, [currentPage, imagesPerPage, isWarnaOn]);
 
@@ -95,19 +87,22 @@ const Result = ({ currentPage, setCurrentPage, imagesPerPage }) => {
 
             {/* Display Result Images*/}
             <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4 '>
-                {imgs.map((item, index) => (
-                <div key={index} className='border shadow-lg-2xl rounded-lg'>
-                    <img src={require(`${item.path}`)} alt={item.name} className='w-full h-[200px] object-cover rounded-t-lg'/>
-                    <div className='flex justify-between px-2 py-3 text-[#33272a]'>
-                        <p className='font-bold '>{item.name}</p>
-                        <p>
-                        <span className='bg-[#33272a] text-[14px] text-[#eff0f3] font-semibold rounded-full p-1'>
-                        {item.val}
-                        </span>
-                        </p>
+                { Hasil&&Hasil.map(image=>{
+                    return(
+                        <div key={Pagination.index} className='border shadow-lg-2xl rounded-lg'>
+                        <img src={image.path} alt={image.name} className='w-full h-[200px] object-cover rounded-t-lg'/>
+                        <div className='flex justify-between px-2 py-3 text-[#33272a]'>
+                            <p className='font-bold '>{image.name}</p>
+                            <p>
+                            <span className='bg-[#33272a] text-[14px] text-[#eff0f3] font-semibold rounded-full p-1'>
+                            {image.val}
+                            </span>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                ))}
+                    )
+                })
+                }
             </div>
 
         </div>

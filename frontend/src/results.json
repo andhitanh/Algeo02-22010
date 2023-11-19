@@ -1,0 +1,37 @@
+[
+      {
+            "name": "0.jpg",
+            "path": "dataset\\0.jpg",
+            "val": "99.99999999999999%"
+      },
+      {
+            "name": "6.jpg",
+            "path": "dataset\\6.jpg",
+            "val": "97.12233893153984%"
+      },
+      {
+            "name": "5.jpg",
+            "path": "dataset\\5.jpg",
+            "val": "96.5842530014688%"
+      },
+      {
+            "name": "3.jpg",
+            "path": "dataset\\3.jpg",
+            "val": "90.37676501290954%"
+      },
+      {
+            "name": "1.jpg",
+            "path": "dataset\\1.jpg",
+            "val": "90.36872970663966%"
+      },
+      {
+            "name": "2.jpg",
+            "path": "dataset\\2.jpg",
+            "val": "90.28248850240452%"
+      },
+      {
+            "name": "4.jpg",
+            "path": "dataset\\4.jpg",
+            "val": "82.11213013838275%"
+      }
+]

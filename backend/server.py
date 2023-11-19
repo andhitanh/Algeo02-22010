@@ -12,7 +12,7 @@ app=Flask(__name__)
 CORS(app)
 pth=os.getcwd()
 par=os.path.join(pth,os.pardir)
-app.config['UPLOAD_FOLDER'] = os.path.join(os.path.abspath(par),'frontend','src','dataset')
+app.config['UPLOAD_FOLDER'] = os.path.join(os.path.abspath(par),'frontend','public','dataset')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 def allowed_file(filename):
@@ -103,8 +103,13 @@ def CBIRWarna():
                 imgArr.append(temp)
         break
     imgArr=sorted(imgArr,key=lambda i: i['val'],reverse=True)
-    jsRet=json.dumps(imgArr,indent=4) 
-    return jsRet
+    with open('../frontend/src/results.json', 'w') as f:
+        json.dump(imgArr,f,indent=6) 
+    resp = jsonify({
+        "message": 'Search finished!',
+        "status": 'successs'
+    })
+    return resp
 
 @app.route('/searchTekstur')
 def CBIRTekstur():

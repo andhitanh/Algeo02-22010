@@ -15,7 +15,7 @@ const Navbar = () => {
           <ul className="font-bold flex" >
             <li>Upload Your Pic!</li>
             <li>How to Use</li>
-            <li><Link to ="/about">About Us</Link></li>
+            <li>About Us</li>
             
           </ul>
 
